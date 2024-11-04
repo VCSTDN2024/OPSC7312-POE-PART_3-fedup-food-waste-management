@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/EditView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/edit_ingredient"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageContainer"
+        android:layout_width="66dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ingredientImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/orange"
+            android:contentDescription="@string/tap_to_select_ingredient_image"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="8dp"
+            android:src="@drawable/ic_question_mark" />
+    </androidx.cardview.widget.CardView>
+    <!-- Category Selection Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/categoryCard"
+        android:layout_width="341dp"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardBackgroundColor="#33FFFFFF"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tilIngredientName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageButton
+                android:id="@+id/btn_minus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/custom_button"
+                android:contentDescription="@string/decrease_quantity"
+                android:src="@drawable/ic_minus" />
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/fridge"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/btn_plus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="@color/green"
+                android:contentDescription="@string/increase_quantity"
+                android:src="@drawable/ic_plus" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!-- Input Fields -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilIngredientName"
+        android:layout_width="251dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="90dp"
+        app:boxBackgroundColor="#33FFFFFF"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageContainer">
+
+        <EditText
+            android:id="@+id/et_ingredient_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/custom_text_box"
+            android:gravity="center"
+            android:hint="@string/ingredient_name"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightgrey" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilExpirationDate"
+        android:layout_width="251dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="26dp"
+        app:boxBackgroundColor="#33FFFFFF"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilIngredientName">
+
+        <EditText
+            android:id="@+id/et_expiration_date"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:background="@drawable/custom_text_box"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="(YYYY-MM-DD)"
+            android:inputType="none"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightgrey" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilQuantity"
+        android:layout_width="252dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="26dp"
+        app:boxBackgroundColor="#33FFFFFF"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilExpirationDate">
+
+        <EditText
+            android:id="@+id/et_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_text_box"
+            android:gravity="center"
+            android:hint="@string/quantity"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightgrey" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNotes"
+        android:layout_width="251dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="26dp"
+        app:boxBackgroundColor="#33FFFFFF"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilQuantity">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_text_box"
+            android:gravity="top|start"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightgrey" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/btnSaveIngredient"
+        android:layout_width="68dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custom_button"
+
+        android:contentDescription="@string/save_ingredient_button"
+        android:src="@drawable/ic_check"
+        app:backgroundTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilNotes"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/white" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

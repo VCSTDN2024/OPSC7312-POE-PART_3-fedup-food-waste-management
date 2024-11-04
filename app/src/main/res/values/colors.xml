@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FDB813</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#00C2FF</color>
+    <color name="grey">#35373a</color>
+    <color name="purple_200">#CC00FF</color>
+    <color name="lightyellow">#FFEB3B</color>
+    <color name="lightred">#F44336</color>
+    <color name="darkgrey">#35373a</color>
+    <color name="lightgrey">#e0e0e0</color>
+    <color name="maire">#1F1F1E</color>
+    <color name="veryLightYellow">#FFF18D</color>
+    <color name="Green">#14ffbc</color>
+    <color name="menu_item_background">#FF000000</color>
+    <color name="menu_item_text">#FFFFFF</color>
+    <color name="Goldenrod">#D3A121</color>
+    <color name="OpaqueGreen">#abf7b1</color>
+    <color name="orange">#f4c430</color>
+    <color name="lightRed">#FF2C2C</color>
+    <color name="green">#14ffbc</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="snackbar_background">#FF0000</color> <!-- Red background -->
+    <color name="snackbar_text_color">#FFFFFF</color> <!-- White text -->
+    <color name="snackbar_action_color">#00FF00</color> <!-- Green action text -->
+
+
+
+    <!-- Base colors -->
+    <color name="primary_blue">#2196F3</color>
+    <color name="primary_green">#4CAF50</color>
+    <color name="primary_purple">#9C27B0</color>
+    <color name="primary_red">#F44336</color>
+
+    <!-- Theme attributes -->
+    <attr name="themeColor" format="reference|color" />
+
+
+    <!-- Light theme colors -->
+    <color name="primary_light">#2196F3</color>
+    <color name="primary_dark_light">#1976D2</color>
+    <color name="accent_light">#FF4081</color>
+    <color name="background_light">#FFFFFF</color>
+    <color name="text_light">#000000</color>
+
+    <!-- Dark theme colors -->
+    <color name="primary_dark">#1565C0</color>
+    <color name="primary_dark_dark">#0D47A1</color>
+    <color name="accent_dark">#FF80AB</color>
+    <color name="background_dark">#121212</color>
+    <color name="text_dark">#FFFFFF</color>
+
+</resources>
